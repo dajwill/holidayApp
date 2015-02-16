@@ -2,6 +2,6 @@ require 'sinatra'
 
 class MyWebApp < Sinatra::Base
   get '/' do
-    send_file erb :"index1"
+    erb :"index1"
   end
 end
