@@ -16,6 +16,11 @@
 </div>
 <div class="col-lg-4 col-md-4">
 	<h1>Content B</h1>
+	<ul>
+	  <% [ 'American Shorthair', 'Abyssynian', 'Russian Blue' ].each do |cat| %>
+	    <li class="cat <%= cat.downcase.gsub(' ','-') %>"><%= cat %></li>
+	  <% end %>
+	</ul>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
