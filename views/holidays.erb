@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="col-lg-6">
+    	<h1>Holidays This Month</h1>
+      <% @holidays.each do |holiday| %>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge"><%= holiday[0]["date"] %></span>
+            <%= holiday[0]["name"] %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+    <div class="col-lg-6">
+    	<h1>Holidays in June 1993</h1>
+        <% @birthHolidays.each do |birthHoliday| %>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge"><%= birthHoliday[0]["date"] %></span>
+            <%= birthHoliday[0]["name"] %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
+</div>
