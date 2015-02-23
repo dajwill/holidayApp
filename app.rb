@@ -7,6 +7,6 @@ class MyWebApp < Sinatra::Base
     @date = Time.now
     @holidays = HolidApi.get(country:'us', year:'@date.year', month:'@date.month')
     @specialHolidays = HolidApi.get(country:'us', year:'1993', month:'6')
-    erb :index
+    erb :index1
   end
 end
