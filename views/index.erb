@@ -8,7 +8,7 @@
   <body>
   	<div class="container">
     <p>Welcome to <strong>Good Burger</strong>. Home of the <strong>Good Burger</strong>. Can I take your order?</p>
-        <div class="col-lg-8 col-md-6">
+        <div class="col-lg-6">
         	<h1>Holidays This Month</h1>
           <% @holidays.each do |holiday| %>
             <ul class="list-group">
@@ -19,9 +19,16 @@
             </ul>
           <% end %>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-6">
         	<h1>Holidays in June 1993</h1>
-        	
+            <% @birthHolidays.each do |birthHoliday| %>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="badge"><%= birthHoliday[0]["date"] %></span>
+                <%= birthHoliday[0]["name"] %>
+              </li>
+            </ul>
+          <% end %>
         </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
