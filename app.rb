@@ -1,15 +1,12 @@
 require 'sinatra'
-require 'cat_api'
-
-class CatIndustriesApp < Sinatra::Base
-	get '/cats' do
-		@pictures = CatAPI.new.get_images(category: 'hats')
-		erb :cats
-	end
-end
+require 'holidapi'
+require 'date'
 
 class MyWebApp < Sinatra::Base
   get '/' do
-    erb :"index1"
+    @date = Time.now
+    @holidays = HolidApi.get(country:'us', year:'@date.year', month:'@date.month')
+    @specialHolidays = HolidApi.get(country:'us', year:'1993', month:'6')
+    erb :index
   end
 end

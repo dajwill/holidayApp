@@ -8,30 +8,16 @@
   <body>
   	<div class="container">
     <p>Welcome to <strong>Good Burger</strong>. Home of the <strong>Good Burger</strong>. Can I take your order?</p>
-    <div class="col-lg-8 col-md-8">
-    	<h1>Content A</h1>
-    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="col-lg-4 col-md-4">
-    	<h1>Content B</h1>
-    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+        <div class="col-lg-8 col-md-6">
+        	<h1>Holidays This Month</h1>
+        	<% @holidayz.each do |holiday| %>
+                  <h3 class="headerText"> <%= holidays["name"] %> </h3>
+            <% end %>
+        </div>
+        <div class="col-lg-4 col-md-6">
+        	<h1>Holidays in June 1993</h1>
+        	
+        </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
