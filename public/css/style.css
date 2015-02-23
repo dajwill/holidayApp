@@ -1,3 +1,7 @@
 body {
 	background-color: salmon;
 }
+
+#content {
+	margin-top: 50px;
+}
