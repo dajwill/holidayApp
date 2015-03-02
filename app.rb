@@ -9,7 +9,7 @@ class MyWebApp < Sinatra::Base
 
   get '/holidays' do
   	puts params
-    @holidays = HolidApi.get(country: params['country'], year: params['year'], month: params['month'])
+    @holidays = HolidApi.get(country: 'us', year: params['year'], month: params['month'])
     @birthHolidays = HolidApi.get(country: 'us', year: '1993', month: '6')
 
     erb :holidays
